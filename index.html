@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>Baloney Clock: A Timer Tool for Chaotic Kitchens</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Source+Sans+Pro" rel="stylesheet">
+ <link rel = "stylesheet" type = "text/css" href = "style.css" />
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+    <h1 id="heada">
+            <img id="logo" src="winking_chef.jpg">Baloney
+         </h1>
+         <p>Don't burn those munchies fam.
+            <i class="em em-egg"></i>
+         </p>
+         <p id="currentTime"></p>
+      <h2>Get to Cookin <i class="fa fa-plus-circle fa-1x" id="addTimerBtn" aria-hidden="true"></i></h2>
+    </div>
+  </div>
+  <div id="timers">
+  </div>
+</div>
+
+<script id="timerTemplate" type="text/x-handlebars-template">
+  <div id="timerz" class="row well timer" timerId="{{timerId}}" style="display:none">
+    <div class="col-lg-offset-2 col-lg-4 col-sm-offset-1 col-sm-4 col-xs-8">
+      <input type="text" class="form-control" id="timerLabel" placeholder="Timer Name">
+    </div>
+    <div class="col-lg-2 col-sm-2 col-xs-4">
+      <span class="timerVal">00:00</span>
+    </div>
+    <div class="col-lg-4 col-sm-5 col-xs-12">
+      <i class="fa fa-play-circle fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-refresh fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-times fa-3x" aria-hidden="true"></i>
+    </div>
+  </div>
+</script>
+
+<script id="timerAlertTemplate" type="text/x-handlebars-template">
+    <div id="timer{{timerName}}Alert" title="Timer Expired: {{timerName}}">
+        <p>The timer {{timerName}} has expired!</p>
+    </div>
+</script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="https://code.createjs.com/soundjs-0.6.2.min.js"></script>
+<script src="script.js"></script>
+</body>
